@@ -1,2 +1,2 @@
-Helo, Python.
+Hello, Python.
 Hello, World
