@@ -22,7 +22,7 @@ def main():
         elif fn == 5:
             fn5_save_customer_csv(customer_list) # csv 백업
         elif fn == 9:
-            fn9_sav1e_customer_txt(customer_list) # txt 백업
+            fn9_save_customer_txt(customer_list) # txt 백업
             break
 if __name__ == '__main__':
     main()
