@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style> /*위부터 아래대로 차례차레 적용*/
+      * { /*w전체선택자 = 페이지 초기화 용도 : 전체 페이지의 디자인을 초기화*/
+          margin:0;
+          padding:0;
+          color:saddlebrown;
+
+      }
+      header, nav, section, footer{
+          border:1px solid gray;
+          width:500px;
+          margin:2px;/* 좌우 여백을 나눔 */
+
+      }
+      /* ul li 메뉴를 수평으로 */
+      nav ul{ oveflow:hidden;} /*수평으로 하고픈 태그의 부모단*/
+      nav ul li{
+          float:left;
+          list-style:none;
+          /*width: 125px;
+          text-align:center;*/ /*글씨 가운데*/
+          margin:1px 25px;
+      }
+      section{
+          clear:both; /* float속성을 clear. */
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>00 주식회사</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>회사소개</li><li>서비스소개</li><li>고객센터</li><li>공지사항</li>
+        </ul>
+    </nav>
+    <section>
+        <p>
+            선택자란
+        </p>
+        <p>
+            대통령은
+        </p>
+    </section>
+    <footer>
+        <p>서울시 XX구 00ehd ㅁㅁ빌딩 xF</p>
+    </footer>
+</body>
+</html>
