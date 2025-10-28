@@ -4,28 +4,16 @@
   <meta charset="utf-8" />
   <title></title>
   <style> /* 위부터 아래로 차례차례 적용 */
-    * { /* 전체선택자=페이지 초기화 용도 : 전체 페이지의 디자인을 초기화 */
-        margin:0;
-        padding:0;
-        color:saddlebrown;
+    header, footer{border:1px solid gray;}
+    h1{
+      border:1px dashed red; margin: 2px; /*밖여백 위우하좌*/
     }
-    header, nav, section, footer{
-      border:1px solid gray;
-      width:500px;
-      margin:2px auto; /* 좌우 여백을 나눔 */
+    li, p{
+      color:red; /* 글자색 */
+      background-color:pink; /*바탕색*/
+      font-weight: bold; /* 글자 굵게*/
     }
-    /* ul li 메뉴를 수평으로 */
-    nav ul{ overflow:hidden; } /* 수평으로 하고픈 태그의 부모단 */
-    nav ul li{
-      float:left;
-      list-style:none;
-      width: 125px;
-      text-align:center; /*글씨 가운데로*/
-      /*margin:1px 25px;*/
-    }
-    section {
-      clear: both; /* float속성을 clear. overflow:hidden을 했으면 생략 가능 */
-    }
+    p{ color:chocolate; }
   </style>
 </head>
 <body>
