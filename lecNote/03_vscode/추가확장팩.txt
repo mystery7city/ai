@@ -1,0 +1,12 @@
+🧠 python 수업 때
+korean
+python
+jupyter
+
+⚡ 웹표준 수업일 때
+korean (한글팩설치 후 resart해줘야 함)
+Prettier - Code formatter(prettier로 검색 ; 코드 포맷팅)
+open in browser (브라우저로 볼 수 있는 프로그램 Alt+B)
+indent-rainbow(indent - 들여쓰기 레벨을 보기 쉽게 색으로 구별)
+Auto Rename Tag(rename - 여는 태그를 바꾸면 닫는 태그도 자동 변경)
+Live Server(Alt + L O ) - Open with Live Server
