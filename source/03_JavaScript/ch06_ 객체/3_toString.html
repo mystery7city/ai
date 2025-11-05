@@ -16,12 +16,23 @@
                 let msg = this.age + '살' + this.name + '님은' + food + '를 먹습니다';
                 alert(msg);
             },
+            'toString' : function(){
+                let output = '';
+                for(let key in this){
+                    if(key!='eat' && key!='topString'){
+                    output += key + ' : ' + this[key] + '<br>';
+                    }
+                
+                }
+                return output;
+            },
         };
-        person.eat('덮밥');
-        document.write(person.name + '님' + person['age'] + '<br>');
-        document.write(person.eat + '<br>');
-        document.write(person+ '<br>');
-        d
+        
+        document.writeln(person + '<br>');
+        person.nickname = '동해번쩍이';
+        document.writeln(person + '<br>');
+        person.nickname = '열공';
+        document.writeln('>>>' + person + '<br>');
 
 
     </script>

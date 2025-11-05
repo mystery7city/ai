@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    
+    <script>
+        let str = '  abc @ abc @  ';
+        document.write('원본:' + str + '<br>' );
+        document.write('글자수:' + str.length + '<br>');
+        document.write('글자연결:' + str.concat(str) + '<br>');
+        // str.substring(a, b) : a번째부터 b번째 앞까지 추출 str[a:b]역할
+        // str.substring(a) : a번째부터 끝까지 추출 str[a:]역할
+
+        document.write('3~6번째앞 추출:' + str.substring(3, 6) + '<br>');
+
+        document.write('3번째부터 6자 추출:' + str.substr(3, 6) + '<br>');
+        document.write('맨처음 @의 위치:' + str.indexof('@') + '<br>');
+        document.write('맨처음 z의 위치:' + str,indexOf('k') + '<br>');
+        document.write('맨뒤 @의 위치:' + str.lastIndexOf('@') + '<br>');
+        document.write('앞뒤 space 제거:' + str.trim() +'<br>');
+        document.wirte('대문자로:' + str.toUpperCase() + '<br>');
+        document.wirte('소문자로:' + str.toLowerCase() + '<br>');
+        document.write('첫 @를 9로 수정:' + str.replace('@', '9') + '<br>');
+        document.write('@를 9로 다 수정:' + str.replaceAll('@', '9') + '<br>');
+        document.write('space 모두 제거:' + str.replace(' ', '') + '<br>');
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
