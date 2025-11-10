@@ -1,0 +1,10 @@
+웹데이터 수집 >> 전처리 >> 분석 >> DL/ML
+#방법1
+
+import requests
+
+url = 'http://~?'
+params = {'q':'비트코인','p':1}
+
+headers = {'user-agent':'~'}
+response = requests.get(url, params=params, headsers=headers)
