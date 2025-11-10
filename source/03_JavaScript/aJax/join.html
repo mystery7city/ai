@@ -7,8 +7,8 @@
 	<!-- $('#id')의 keyup 이벤트에 $.ajax()구현 -->
 	<!-- $('#pw, #pwChk)의 keyup 이벤트에 두 비밀번호 체크 -->
 	<!-- $('form')의 submit 이벤트에 유효성 검사(#idConfirmResult, #pwChkResult) -->
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
     $(function(){
 			$('#id').keyup(function(){
 				let id = $(this).val().trim();
@@ -21,12 +21,12 @@
             data : {id:id}, //'id='+id,
             dataType : 'html',
             success : function(data){
-                $('#idConfirmResult').html(data);
+              	$('#idConfirmResult').html(data);
             },
             error : function(code){
-                alert(code.status + '/' + code.statusText);
+              	 alert(code.status + '/' + code.statusText);
             }, // error
-            });//ajax
+          	});//ajax
 				}//if
 			});// id keyup event
 			$('#pw, #pwChk').keyup(()=>{
@@ -56,7 +56,7 @@
 				}
 			});
     });
-</script>
+  </script>
 </head>
 <body>
 	<div id="joinForm_wrap">
@@ -101,4 +101,3 @@
 	</div>
 </body>
 </html>
-
