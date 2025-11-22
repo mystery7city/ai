@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #wrap{width:700px; margin:0 auto;}
+        #header{text-align:center;}
+        #content{
+            border-top: 1px solid #aaaaaa;
+            border-bottom: 1px solid #AAAAAA;
+            text-align: justify;
+        }
+        #content p:nth-child(2)::first-line,
+        #content p:nth-child(3)::first-line{
+            color: blue;
+            font-weight:bold;
+            font-size:20px;
+        }
+        #content p:nth-child(2)::first-letter,
+        #content p:nth-child(2)::first-letter{
+            font-size:2em;
+        }
+        #content p:nth-child(2)::selection{
+            background-color:violet;
+            color:yellow;
+        }
+        #content ul li{margin:10px 0;}
+        #content a{
+            color:blue;
+            text-decoration:none;
+            display:block; /* 블록형 태그로 */
+        }
+        #content a:after{
+            content : ' - ' attr(href);
+        }
+        #content li:not(.web) a { /*부정선택자: li중에 .webㅇ르 제외하고*/
+            background-color:yellow;    
+        }
+        #content li.web{
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+          <h1>제목이나 회사명</h1>
+
+        </div>
+        <div id="content">
+            <p>
+                모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다.
+            </p>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            </p>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            </p>
+            <ul>
+                <li><a href="http://www.naver.com">네이버</a></li>
+                <li class=" ="web"><a href="http://www.daum.com">다음</a></li>
+                <li><a href="http://www.google.com">구글</a></li>
+            </ul>
+
+
+        </div>
+        <div id="footer">
+            <ul>
+                <li><img src="ch04/logo.png" /></li>
+                <li><img src="ch04/address.png" /></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

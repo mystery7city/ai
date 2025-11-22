@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title></title>
+    <style>
+    *{margin:0; padding :0;}
+
+
+    a{
+        text-decoration: none;
+        color:purple;
+        font-weight: bold;
+        display : block;
+    }
+
+
+
+    li{list-style: none;}
+
+    div{
+        border: 2px solid green;
+        margin: 5px; padding: 5px;
+        text-align: center;
+    }
+
+    #container{
+        width:800px; margin:0 auto;
+    }
+
+
+    #header{
+        line-height: 100px;
+        background-color: yellow;
+    }
+
+    #nav p{ height: 40px; line-height: 40px;}
+    #nav ul{
+        width: 700px; margin: 0 auto;
+        overflow: hidden;
+    }
+    #nav ul li{
+        float: left;
+        line-height: 50px;
+        background-color: pink;
+
+        margin: 2px;
+        width:136px;
+    }
+    #nav ul li:first-child{
+        border-radius: 20px 0 0 20px;
+    }
+    #nav ul li:last-child {
+        border-radius: 0 20px 20px 0;
+    }
+
+    #section{
+        overflow:hidden;
+    }
+
+    #section #content{
+        float: left;
+        width: 538px;
+        height: 200px
+    }
+        #section #banner {
+            float: left;
+            width: 154px; /*176px필요(margin,padding,border)*/
+            height: 200px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div id = container></div>
+        <div id =header>HEADER</div>
+
+        <div id="nav">
+        <p>NAVIGATION</p>
+        <ul>
+            <li><a href="#menu1">menu1</a></li>
+            <li><a href="#menu2">menu2</a></li>
+            <li><a href="#menu3">menu3</a></li>
+            <li><a href="#menu4">menu4</a></li>
+            <li><a href="#menu5">menu5</a></li>
+        </ul>
+
+
+        </div>
+        <div id="section">
+            <div id="content">CONTENT</div>
+            <div id="content">BANNER</div>
+
+        </div>
+        
+
+</body>
+</html>

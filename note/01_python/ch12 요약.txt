@@ -1,0 +1,62 @@
+matplotlib
+
+
+그래프 영역 나누기
+
+	subplot()함수로 서브플롯 추가
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+그래프 커스터마이징
+
+1) linestyle, linewidth, color, marker
+
+2) text(), annotate()
+
+
+
+
+Seaborn
+
+데이터 준비
+
+
+미적 속성 설정
+
+
+함수로 그래프 그리기
+
+
+
+
+곤계형
+
+범주형
+
+
+
+쌍관계 그래프 : pairplot
+
+
+
+
+
+
+
+
+
+

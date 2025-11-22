@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점수 누적 프로그램</title>
+    <script>
+        let cnt = 0;     // 점수 입력 횟수
+        let right = 0;   // 올바른 숫자 입력 횟수
+        let wrong = 0;   // 잘못된 입력 횟수
+        let sum = 0;     // 점수 누적 합계
+
+        // confirm 창 반복
+        while (confirm("누적할래?")) {
+            let score = prompt("점수를 입력하세요 (0 ~ 100 사이)");
+
+            if (score === null) { // 취소를 누르면 종료
+                break;
+            }
+
+            score = Number(score);
+
+            if (isNaN(score) || score < 0 || score > 100) {
+                alert("0~100 사이의 숫자를 입력하세요!");
+                wrong++;
+                continue; // 다시 confirm 창으로
+            }
+
+            // 정상 입력일 경우
+            right++;
+            cnt++;
+            sum += score;
+        }
+
+        // 결과 출력```````````````````````````````````````
+        
+        document.writeln(`<p>총 입력 횟수: ${cnt}</p>`);
+        document.writeln(`<p>올바른 입력 횟수: ${right}</p>`);
+        document.writeln(`<p>잘못된 입력 횟수: ${wrong}</p>`);
+        document.writeln(`<p>점수 합계: ${sum}</p>`);
+    </script>
+</head>
+<body>
+</body>
+</html>
