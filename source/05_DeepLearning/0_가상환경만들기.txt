@@ -42,3 +42,21 @@ Jupyter lab –notebook-dir=d:\ai\source\05_deepLearning
 
 
 
+
+
+%% mnist에서
+
+pip install opencv-python == 4.8.1.78
+
+%% 자연어처리에 설치한 것
+
+pip install nltk == 3.7 # 영어권 자연어처리
+pip install konlpy 			# 한글 자연어처리(java필요)
+pip install python-mecab-ko 		# 한글자연어처리(C++필요)
+
+
+
+
+
+
+
