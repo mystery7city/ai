@@ -1,0 +1,92 @@
+/***** 페이지 초기화 *****/
+*{margin:0; padding:0;}
+a{
+  text-decoration: none; 
+  color:purple;
+  font-weight: bold;
+  display: block;
+}
+li{list-style: none;}
+div{
+  border: 1px solid lightgray;
+  margin: 5px; padding: 5px;
+  text-align: center;
+}
+/***** 페이지 전체를 가운데로 *****/
+#container{
+    width:800px; margin:0 auto;
+}
+/***** #header *****/
+#header{
+  height:100px; line-height: 100px;
+  background-color: yellow;
+}
+/***** #nav *****/
+#nav p{ height:40px; line-height: 40px;}
+#nav ul {
+  width:700px; margin: 0 auto;
+  overflow: hidden;
+}
+#nav ul li{
+  float: left;
+  line-height: 50px;
+  /* height 지정하면 서브메뉴가 안 보임 */
+  background-color: pink;
+  /* margin: 0.5%;  width:19%;  */
+  margin: 2px;
+  width:136px; /* 700/5=140px */
+}
+#nav ul li:first-child{
+  border-radius: 20px 0 0 20px;
+}
+#nav ul li:last-child{
+  border-radius: 0 20px 20px 0;
+}
+/***** #section *****/
+#section{ 
+  overflow: hidden;
+  /* 전체 800px에서 margin, padding, border 뺀, width는 778px됨 */
+}
+#section #content{
+  float: left;
+  width: 578px; /* 578 + 10(좌우margin) + 10(좌우padding) + 2(좌우border)=600필요*/
+  height: 200px;
+}
+#section #banner{
+  float: left;
+  width: 154px; /*176px필요(margin,padding,border)*/
+  height: 200px;  
+}
+/***** #footer *****/
+#footer{
+  height:100px; line-height: 100px;
+  background-color: yellow;
+}
+
+/* * * * * * * background image * * * * * * */
+#container{
+  position:relative;
+}
+#background_image{
+  background:url('ch05/sulhyun.jpg') no-repeat;
+  position:absolute;
+  left:0;
+  top:0;
+  margin:0; padding:0;
+  width:100%;
+  height:100%;
+  background-size:120%;
+  z-index:-9999;
+  opacity:0.3;
+}
+
+/* * * * * * 서브메뉴 * * * * * */
+#nav {
+  height: 100px; /*높이를 지정하지 않으면 서브메뉴 들어갈 때 넓어짐*/
+  position:relative; /*z-index값을 적용시키려고*/
+  z-index:9999;
+}
+.submenu {display:none;}
+#nav ul li:hover .submenu {
+  display: block;
+}
