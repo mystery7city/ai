@@ -55,6 +55,23 @@ pip install langchain-anthropic # claude 모델(1.2.0)
 
 
 
+pip install openai 
+
+pip install matplotlib # pillow
+
+pip install stramlit
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

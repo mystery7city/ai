@@ -21,12 +21,12 @@
             data : {id:id}, //'id='+id,
             dataType : 'html',
             success : function(data){
-              	$('#idConfirmResult').html(data);
+              $('#idConfirmResult').html(data);
             },
             error : function(code){
-              	 alert(code.status + '/' + code.statusText);
+              alert(code.status + '/' + code.statusText);
             }, // error
-          	});//ajax
+          });//ajax
 				}//if
 			});// id keyup event
 			$('#pw, #pwChk').keyup(()=>{
@@ -101,3 +101,4 @@
 	</div>
 </body>
 </html>
+

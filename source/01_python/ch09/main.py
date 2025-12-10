@@ -1,4 +1,3 @@
-
 from customer import load_customers, fn1_insert_customer_info
 from customer import fn2_print_customers, fn3_delete_customer
 from customer import fn4_search_customer, fn5_save_customer_csv
