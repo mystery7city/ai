@@ -65,7 +65,8 @@ pip install stramlit
 
 
 
-
+pip install streamlit # 웹 서비스 데모
+pip install sounddevice scipy # 마이크 입력 녹음하여 전송하기
 
 
 
