@@ -1,7 +1,3 @@
-Name|Age|Email|Address|Birth
-홍길동|20|hong@hong.com|서울시 강동구|1999-01-01
-홍길서|30|seo@hong.com|서울시 중구|1999-12-01
-홍길남|21|nam@hong.com|서울시 강동구|1999-11-01
-홍길북|22|buk@hong.com|서울시 관악구|1999-05-01
-홍길중|23|mid@hong.com|부산시 중구|1999-01-30
-#홍길뜽|24|non@not.com|없는구|2000-01-01
+version https://git-lfs.github.com/spec/v1
+oid sha256:00b1b3e950b6fd5188ed4a6e1af7c67e7d8a5435d3b20380c8313c757335d3ba
+size 355

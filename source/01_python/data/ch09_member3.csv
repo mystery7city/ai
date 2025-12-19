@@ -1,4 +1,3 @@
-name,age,email,address,job
-홍길동,20,h@h.com,서울시 관악구
-신길동,40,s@h.com,서울시 영등포구,팀장
-김길동,30,k@h.com,서울시 동작구
+version https://git-lfs.github.com/spec/v1
+oid sha256:642b2c1602ef484d59d6d6bd8cd99704014e4204d162c795180b8740affd946f
+size 159

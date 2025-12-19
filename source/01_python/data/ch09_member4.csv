@@ -1,4 +1,3 @@
-name,Age,Email,Address
-신길동,30,sg@hong.com,서울
-홍길동,20,ho@hong.com,수원
-마길동,25,ma@hong.com,안양
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6e44dba080fc0768dcdbfd6cefdc201c5cc75cccc2abf06e28c802203216255
+size 119
