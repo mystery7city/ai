@@ -8,4 +8,5 @@
 
 
 # pip freeze > requirements.txt
-# requirements.txt xladnjsRlfl rhddb
+# requirements.txt 팀원끼리 공유
+# requirements.txt에 있는 라이브러리를 똑같이 설치 : pip install -r requirements.txt
