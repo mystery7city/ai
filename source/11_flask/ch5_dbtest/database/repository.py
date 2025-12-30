@@ -1,5 +1,6 @@
 import cx_Oracle
-conn = cx_Oracle.connect("scott", "tiger", "210.121.189.12:1521/xe")
+conn = cx_Oracle.connect("scott", "tiger", 
+                        "127.0.0.1:1521/xe")
 def get_emp_list():
     cursor = conn.cursor()
     sql = "SELECT * FROM EMP"
@@ -17,8 +18,8 @@ def get_emp(empno):
     emp = dict(zip(keys, emp))
     return emp # 딕셔너리
 if __name__ == '__main__':
-    emp_list = get_emp_list()
-    print(emp_list)
+    # emp_list = get_emp_list()
+    # print(emp_list)
     emp = get_emp(7902)
     print(emp)
 
