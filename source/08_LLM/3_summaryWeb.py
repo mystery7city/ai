@@ -1,12 +1,10 @@
-# 인터프리터선택(ctrl + shift + p) -> streamlit run 3_summaryWeb.py
+# 인터프리터선택(ctrl+shift+p) -> streamlit run 3_summaryWeb.py
 import streamlit as st
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
-
 def askGPT(prompt):
-    "GPT에게 요청하여 prompt내용을 1줄 요약하여 return"
-    load_dotenv()
+    "GPT에게 요청하여 prompt내용을 1줄 요약하여 return"    
     client = OpenAI()
     response = client.chat.completions.create(
         model="gpt-4.1-nano",

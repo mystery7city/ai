@@ -1,3 +1,4 @@
+# ctrl+shift+p => 인터프리터선택(llm)  
 # assistant chatbot
 # 1. 어시스턴트 생성 (id확보)
 # 2. 스레드 생성(id확보) - 새대화 시작하고 지금부터 대화 history 저장
@@ -46,3 +47,17 @@ while True:
     messages = client.beta.threads.messages.list(thread_id=thread_cs.id)
     reply = messages.data[0].content[0].text.value # 최신답변
     print("Assistant :", reply)
+
+# 6. 대화 이력 data/ch7_history.txt로 파일 저장
+print('이상의 대화 이력을 파일에 백업합니다')
+sorted_messages = sorted(messages.data, 
+                        key=lambda msg : msg.created_at)
+with open('data/ch7_history.txt', 'w', encoding='utf-8') as f:
+    for msg in sorted_messages:
+        # role / content / dateStr
+        role = msg.role
+        content = msg.content[0].text.value
+        dateStr = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(msg.created_at))
+        # 파일 기록
+        row = "{:9}({}) : {}\n".format(role, dateStr, content)
+        f.write(row)
