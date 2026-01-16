@@ -17,9 +17,9 @@ def result(request):
     words_dic = dict() # 빈딕셔너리 => {'홍길동':2, '아자':1}
     for word in words:
         if word in words_dic.keys():
-        words_dic[word] += 1 # {'홍길동':2}
+            words_dic[word] += 1 # {'홍길동':2}
         else:
-        words_dic[word] = 1 # {'홍길동':1, '아자':1 }
+            words_dic[word] = 1 # {'홍길동':1, '아자':1 }
     #  {'홍길동':2, '아자':1}
     context = {
         'fulltxt':fulltxt,
