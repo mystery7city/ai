@@ -10,3 +10,6 @@ lecNote/
 data/
 >>>>>>> 9c5bdfef8b860b50d221989f43d3e0f2216ad1ac
 mystery7city/
+".env" 
+".env.*" 
+".env.txt" 
