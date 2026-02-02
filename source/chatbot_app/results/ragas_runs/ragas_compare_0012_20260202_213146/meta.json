@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-02-02 21:31:46",
+  "run_id": 12,
+  "timestamp": "20260202_213146",
+  "run_dir": "C:\\Users\\darks\\Desktop\\자료들\\AI자료\\ai\\source\\chatbot_app\\results\\ragas_runs\\ragas_compare_0012_20260202_213146",
+  "prefix": "ragas_compare",
+  "n_base_samples": 25,
+  "n_exp_samples": 25,
+  "metrics": [
+    "ContextPrecision",
+    "ContextRecall",
+    "Faithfulness",
+    "AnswerRelevancy"
+  ],
+  "llm": {
+    "model": "gpt-4o-mini"
+  },
+  "testset": {
+    "testset_path": "C:\\Users\\darks\\Desktop\\자료들\\AI자료\\ai\\source\\chatbot_app\\ragas_testset_full.jsonl",
+    "testset_lines": 25,
+    "testset_sha1": "8e7d9763acc43f5616f817cbecd7e8ac49765898"
+  }
+}
