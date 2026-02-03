@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-02-03 11:27:54",
+  "run_id": 15,
+  "timestamp": "20260203_112754",
+  "run_dir": "C:\\ai\\source\\chatbot_app\\results\\ragas_runs\\ragas_compare_0015_20260203_112754",
+  "prefix": "ragas_compare",
+  "n_base_samples": 10,
+  "n_exp_samples": 10,
+  "metrics": [
+    "ContextPrecision",
+    "ContextRecall",
+    "Faithfulness",
+    "AnswerRelevancy"
+  ],
+  "llm": {
+    "model": "gpt-4o-mini"
+  },
+  "testset": null
+}
