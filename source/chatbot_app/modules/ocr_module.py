@@ -165,7 +165,7 @@ def _ocr_image_tesseract(img, lang: str = "kor+eng") -> str:
         return ""
     if not PIL_AVAILABLE or Image is None:
         return ""
-    return (pytesseract.image_to_string(img, lang=lang) or "").strip()
+        return (pytesseract.image_to_string(img, lang=lang) or "").strip()
 
 
 def extract_text_from_path(

@@ -1,0 +1,69 @@
+A 담당 DENSE 쪽
+
+“정답 근거가 어디 있는지를 놓치지 않게”
+
+A는 ContextRecall .
+
+맡는 것
+
+k_law  k_rule  k_case
+
+search_multiplier
+
+case_candidate_k
+
+case_context_top_k
+
+(부분적으로) dense weight ↑ 실험
+
+RAGAS에서 주로 보는 지표
+
+ContextRecall (최우선)
+
+AnswerRelevancy (보조)
+
+
+B 담당 SPARSE + RERANK
+
+“가져온 것 중에서 쓸모없는 걸 제거”
+
+B는 ContextPrecision 책임자야.
+
+맡는 것
+
+enable_bm25
+
+sparse_mode
+
+bm25_algorithm  k1  b
+
+bm25_use_kiwi
+
+bm25_max_doc_chars
+
+enable_bm25_title
+
+bm25_title_field
+
+hybrid_sparse_title_ratio
+
+enable_rerank
+
+rerank_threshold
+
+rerank_max_documents
+
+rerank_doc_max_chars
+
+dedupe_key_fields
+
+RAGAS에서 주로 보는 지표
+
+ContextPrecision (최우선)
+
+Faithfulness (보조)
+
+Fusion weight (hybrid_dense_weight  hybrid_sparse_weight)는
+AB 중 누구 단독도 맡지 말고, “공통 베이스”로 먼저 고정.
+
+챗GPT는 이렇게 분담하는게 좋다고 합니다

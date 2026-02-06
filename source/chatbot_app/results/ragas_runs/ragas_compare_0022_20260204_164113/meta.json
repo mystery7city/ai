@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-02-04 16:41:13",
+  "run_id": 22,
+  "timestamp": "20260204_164113",
+  "run_dir": "C:\\ai\\source\\chatbot_app\\results\\ragas_runs\\ragas_compare_0022_20260204_164113",
+  "prefix": "ragas_compare",
+  "n_base_samples": 25,
+  "n_exp_samples": 25,
+  "metrics": [
+    "faithfulness"
+  ],
+  "llm": {
+    "model": "gpt-4o-mini"
+  },
+  "testset": {
+    "testset_path": "C:\\ai\\source\\chatbot_app\\ragas_testset_full.jsonl",
+    "testset_lines": 25,
+    "testset_sha1": "2f82dad63f6ba5bb6d6162092114303f380272dd"
+  }
+}
