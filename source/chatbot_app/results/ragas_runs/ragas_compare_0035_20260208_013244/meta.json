@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-02-08 01:32:44",
+  "run_id": 35,
+  "timestamp": "20260208_013244",
+  "run_dir": "C:\\Users\\darks\\Desktop\\자료들\\AI자료\\ai\\source\\chatbot_app\\results\\ragas_runs\\ragas_compare_0035_20260208_013244",
+  "prefix": "ragas_compare",
+  "n_base_samples": 10,
+  "n_exp_samples": 10,
+  "metrics": [
+    "ContextPrecision",
+    "ContextRecall",
+    "Faithfulness",
+    "AnswerRelevancy"
+  ],
+  "llm": {
+    "model": "solar-pro2"
+  },
+  "testset": {
+    "testset_path": "C:\\Users\\darks\\Desktop\\자료들\\AI자료\\ai\\source\\chatbot_app\\ragas_testset_10_selected.jsonl",
+    "testset_lines": 10,
+    "testset_sha1": "acdea702e34f1bd3f7a11b81f6cde091251d82b8"
+  }
+}
