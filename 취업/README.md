@@ -27,5 +27,4 @@
 # mystery7city
 
 ## 📁 Project 2
-
-[2ndTeamProject 바로가기](https://github.com/thre3o2wo/2ndTeamProject)
+[![2차프로젝트](https://img.shields.io/badge/2nd_Project-33FF33?style=for-the-badge&logo=github&logoColor=black)](https://github.com/thre3o2wo/2ndTeamProject)
