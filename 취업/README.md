@@ -24,4 +24,8 @@
 | **Version Control** | <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"> |
 
 
+# mystery7city
 
+## 📁 Project 2
+
+[2ndTeamProject 바로가기](https://github.com/thre3o2wo/2ndTeamProject)
