@@ -5,7 +5,7 @@
 - 👋안녕하세요. AI 개발자 지원자 아무개 입니다**
 - 🔥컨택을 원하시면 @naver.com으로 연락주세요.
 
-# 🔗 LINK
+# 🔗 LINKaaaaaaaaaaa
 - **KDT 기업맞춤형 AI-X 교육과정 (824시간)**: Python 기반의 Full-Stack 개발 및 AI 모델링 및 LLM 학습일지와 프로젝트 협업 공간
 [![공부일지](https://img.shields.io/badge/공부일지-0000FF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yisy0/ai)
 [![1차프로젝트](https://img.shields.io/badge/1st_PROJECT[프로젝트명]-FF0000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yisy0/1stProject)
@@ -24,4 +24,7 @@
 | **Version Control** | <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"> |
 
 
+# mystery7city
 
+## 📁 Project 2
+[![2차프로젝트](https://img.shields.io/badge/2nd_Project-33FF33?style=for-the-badge&logo=github&logoColor=black)](https://github.com/thre3o2wo/2ndTeamProject)
