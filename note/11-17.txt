@@ -1,4 +1,0 @@
-데이터베이스 CREATE DROP DELETE JOIN
-
-
-eXERD 설치하고 살짝 건드림
