@@ -714,10 +714,10 @@ class RAGConfig:
     sparse_k_case: Optional[int] = None
 
     bm25_algorithm: str = "okapi"  # "okapi" | "plus"
-    bm25_k1: float = 1.5
+    bm25_k1: float = 1.8
     bm25_b: float = 0.85
     bm25_use_kiwi: bool = True
-    bm25_max_doc_chars: int = 2200 # 3000
+    bm25_max_doc_chars: int = 4000 # 3000
 
 
     # -------- Sparse: BM25-title (metadata) --------
@@ -728,7 +728,7 @@ class RAGConfig:
     # title BM25 share within sparse weight (0~1). Actual weights:
     #  w_title = hybrid_sparse_weight * hybrid_sparse_title_ratio
     #  w_text  = hybrid_sparse_weight - w_title
-    hybrid_sparse_title_ratio: float = 0.35
+    hybrid_sparse_title_ratio: float = 0.6
     # -------- Fusion --------
     hybrid_fusion: str = "rrf"  # "rrf" | "rank_sum" | "weighted"
     hybrid_dense_weight: float = 0.5
@@ -739,7 +739,7 @@ class RAGConfig:
     enable_rerank: bool = True
     rerank_threshold: float = 0.2 # 0.2
     rerank_model: str = "rerank-multilingual-v3.0"
-    rerank_max_documents: int = 22 # 80
+    rerank_max_documents: int = 80 # 80
     rerank_doc_max_chars: int = 2600 # 2000
 
     # -------- 2-stage case expansion --------
@@ -885,8 +885,12 @@ class RAGPipeline:
             self._tokenizer = tokenizer
         else:
             if self.config.bm25_use_kiwi and KIWI_AVAILABLE:
-                logger.info("✅ Kiwi 토크나이저 사용 (BM25)")
-                self._tokenizer = KiwiTokenizer()
+                try:
+                    self._tokenizer = KiwiTokenizer()
+                    logger.info("✅ Kiwi 토크나이저 사용 (BM25)")
+                except Exception as e:
+                    logger.warning(f"⚠️ Kiwi 토크나이저 로드 실패, SimpleTokenizer로 대체: {e}")
+                    self._tokenizer = SimpleTokenizer()
             else:
                 logger.info("ℹ️ SimpleTokenizer 사용 (BM25)")
                 self._tokenizer = SimpleTokenizer()
@@ -1464,6 +1468,7 @@ class RAGPipeline:
         *,
         skip_normalization: bool = False,
         extra_context: Optional[str] = None,
+        use_contract_mode: bool = False,  # ✅ Explicit flag for contract mode
     ) -> Dict[str, Any]:
         """UI용: normalized_query, references, answer를 함께 반환.
 
@@ -1472,6 +1477,7 @@ class RAGPipeline:
             user_input: 사용자 질문
             skip_normalization: True이면 질문 표준화 건너뛰기
             extra_context: 사용자가 업로드한 계약서 OCR 텍스트 (SECTION 0로 삽입됨)
+            use_contract_mode: True이면 계약서 분석 프롬프트 사용 (파일 업로드 시에만 True)
         """
         normalized_query = user_input if skip_normalization else self.normalize_query(user_input)
         if not skip_normalization:
@@ -1493,29 +1499,11 @@ class RAGPipeline:
         context_contract = self._format_user_contract_context(extra_context)
         context = (context_contract + "\n\n" + context_main).strip() if context_contract else context_main
 
-        # ==========================
-        # [추가] 계약서 모드 분기 조건을 "타이트"하게
-        # - 단순히 extra_context가 있다고 계약서 모드로 가지 않음
-        # - 실제 계약서 OCR로 보이는 패턴이 있을 때만 계약서 모드
-        # ==========================
-        has_contract = False
-        try:
-            if context_contract and context_contract.strip():
-                # 계약서 OCR에서만 흔히 나오는 키워드/패턴(최소 2개 이상이면 계약서로 간주)
-                contract_signals = [
-                    "임대인", "임차인", "보증금", "차임", "월세", "전세",
-                    "특약", "소재지", "중개", "공인중개사",
-                    "제1조", "제2조", "제3조", "제4조", "제5조",
-                    "계약서", "임대차계약", "원상복구", "관리비"
-                ]
-                hits = sum(1 for s in contract_signals if s in context_contract)
-                has_contract = hits >= 2
-        except Exception:
-            has_contract = False
-
-        # [추가] 시스템 프롬프트 분기
-        system_prompt_to_use = SYSTEM_PROMPT_WITH_CONTRACT if has_contract else SYSTEM_PROMPT_GENERAL
-        # ==========================
+        # ✅ 시스템 프롬프트 분기: use_contract_mode 플래그 사용
+        # - use_contract_mode=True: 파일이 이번 요청에서 업로드됨 → 계약서 분석 모드
+        # - use_contract_mode=False: 일반 질문 또는 follow-up 질문 → 일반 모드
+        system_prompt_to_use = SYSTEM_PROMPT_WITH_CONTRACT if use_contract_mode else SYSTEM_PROMPT_GENERAL
+        logger.info(f"📝 Using prompt mode: {'CONTRACT' if use_contract_mode else 'GENERAL'}")
 
         prompt = ChatPromptTemplate.from_messages(
             [
