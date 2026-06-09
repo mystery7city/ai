@@ -1,74 +1,48 @@
 # Project Index
 
-이 문서는 `ai` 폴더 안의 기존 파일과 하위 폴더를 분석해 분류한 초안입니다.
-이번 작업에서는 기존 파일을 삭제하거나 이동하지 않았습니다.
+현재 저장소의 주요 폴더와 분류 기준입니다. 기존 파일은 삭제하지 않고, 프로젝트 단위로만 재배치했습니다.
 
-## 최상위 구조
+## 최상위 분류
 
-| 경로 | 파일 수 | 현재 성격 | 권장 분류 |
-| --- | ---: | --- | --- |
-| `AI_PROJECTS/` | 2 | 선형 회귀 노트북 중심의 짧은 프로젝트 | `experiments/` 또는 `projects/linear-regression-practice/` |
-| `AI_Study/` | 5316 | Python, 웹, DB, 딥러닝, NLP, LLM, Django/Flask, 팀 프로젝트 자료가 섞인 대형 학습 폴더 | `archive/ai-study-original/` 보관 후 선별 분리 제안 |
-| `Country_Economy_Project/` | 14 | 국가 경제 지표 데이터 분석 노트북과 CSV | `projects/country-economy-analysis/` |
-| `ECONOMY_PROJECT/` | 15 | 환율, 경제 지표, 예측 데이터가 있는 분석 프로젝트 | `projects/exchange-rate-analysis/` |
-| `World_Happiness/` | 4 | 세계 행복 지수 분석 프로젝트 | `projects/world-happiness-analysis/` |
-| `Vibe_project/` | 5 | 숫자 맞히기, 비밀번호 도구 등 Jupyter 기반 소형 제작물 | `experiments/vibe-project/` |
-| `vibe_coding/` | 1 | 계산 관련 Jupyter 노트북 | `experiments/vibe-coding/` |
-| `short_code/` | 3 | 짧은 코딩 연습, 테트리스 노트북 | `experiments/short-code/` |
-
-## 파일 유형 요약
-
-| 유형 | 개수 | 메모 |
-| --- | ---: | --- |
-| `.py` | 1885 | Django/Flask 앱, 모듈, 학습 코드가 다수 포함됨 |
-| `.pyc` | 1779 | 실행 캐시 파일로 보임. 추후 정리 후보 |
-| `.csv` | 278 | 분석용 데이터 파일 다수 |
-| 확장자 없음 | 214 | 실행 파일, 설정, 기타 자료 가능성 |
-| `.html` | 191 | 웹/Django/Flask 관련 템플릿 및 정적 결과 가능성 |
-| `.js` | 185 | 웹 학습/앱 자료 |
-| `.ipynb` | 138 | 분석 및 실험 노트북 |
-| `.jsonl` | 118 | RAG/평가/데이터셋 후보 |
-| `.json` | 97 | 설정, 결과, 모델 메타데이터 |
-| `.txt` | 82 | 텍스트 자료 및 로그 후보 |
-| `.png`, `.jpg`, `.svg` | 122 | 결과 이미지, 스크린샷, 정적 자산 |
-| `.md` | 9 | 기존 문서 |
-
-## 현재 눈에 띄는 정리 포인트
-
-- 루트에 `README.md.md`가 있고 내용 인코딩이 깨져 보입니다. 삭제하지 않고 새 `README.md`를 추가했습니다.
-- `AI_Study/`는 학습 자료, 웹 프레임워크 실습, RAG/챗봇 앱, 프로젝트 산출물이 한데 들어 있어 가장 큰 정리 대상입니다.
-- `.ipynb_checkpoints/`, `__pycache__/`, `.pyc` 파일이 많이 포함되어 있습니다. 이번에는 삭제하지 않았고, 추후 정리 후보로만 둡니다.
-- `ECONOMY_PROJECT/`는 이미 `data/`, `notebooks/`, `reports/`, `src/` 폴더가 있어 프로젝트형 구조로 발전시키기 쉽습니다.
-
-## 이동 제안 목록
-
-실제 이동은 하지 않았습니다. 다음 단계에서 필요할 때만 별도 커밋으로 진행하는 것을 권장합니다.
-
-| 현재 위치 | 제안 위치 | 이유 |
+| 위치 | 분류 | 설명 |
 | --- | --- | --- |
-| `Country_Economy_Project/` | `projects/country-economy-analysis/` | 독립 분석 프로젝트로 관리하기 좋음 |
-| `ECONOMY_PROJECT/` | `projects/exchange-rate-analysis/` | 경제 지표/환율 예측 프로젝트로 명확화 |
-| `World_Happiness/` | `projects/world-happiness-analysis/` | README와 requirements가 있어 프로젝트 단위로 적합 |
-| `AI_PROJECTS/linear_regression_project.ipynb` | `experiments/linear-regression-practice/` | 단일 노트북 실험으로 보임 |
-| `short_code/` | `experiments/short-code/` | 짧은 실습 코드 묶음 |
-| `vibe_coding/` | `experiments/vibe-coding/` | 단일 노트북 실험 |
-| `Vibe_project/` | `experiments/vibe-project/` | Jupyter 기반 소형 제작물 묶음 |
-| `AI_Study/프로젝트 1/` | `projects/power-usage-forecasting/` | 전력량 예측 프로젝트로 보임 |
-| `AI_Study/프로젝트 2/` | `projects/rag-module-comparison/` | RAG 모듈 비교/최적화 프로젝트로 보임 |
-| `AI_Study/chatbot_app*/` | `projects/rag-chatbot-app/` 또는 `archive/` | 중복 앱 후보라 확인 후 분리 필요 |
-| `AI_Study/lease_law_app-main/` | `projects/lease-law-rag-app/` | 임대차 법률 RAG 앱 후보 |
+| `projects/country-economy-project/` | 데이터 분석 | 국가별 GDP, 수출, 군사비, 특허, 인구 등 경제 지표 분석 |
+| `projects/economy-project/` | 데이터 분석 | 환율/경제 지표 분석 및 예측 실험 |
+| `projects/world-happiness/` | 데이터 분석 | 세계 행복 지수 분석 |
+| `coursework/AI_Study/` | 수업/실습 원본 | Python, 웹, DB, ML/DL, NLP, LLM, Flask, Django, 과제 자료 |
+| `experiments/ai-projects/` | 실험 | 선형 회귀 노트북 중심의 짧은 실험 |
+| `experiments/short-code/` | 실험 | 짧은 코딩 연습, Jupyter 테트리스 |
+| `experiments/vibe-coding/` | 실험 | 계산 관련 단일 노트북 |
+| `experiments/vibe-project/` | 실험 | 숫자 맞히기, 비밀번호 도구 등 Jupyter 제작물 |
+| `programming/` | 일반 프로그래밍 학습 | Python, 웹, 백엔드, DB, 네트워크, 보안, DevOps, 테스트 |
+| `tools/repo_cleaner/` | 도구 | 저장소 구조/위험 후보 분석기 |
+| `docs/` | 문서 | 인덱스, 로드맵, 작업 지침 |
+| `reports/` | 보고서 | repo cleaner 결과와 정리 보고서 |
+| `archive/cleanup-candidates/` | 보관 후보 | 삭제하지 않고 보존한 이전/중복 후보 |
 
-## 신규 프로젝트 등록 템플릿
+## 정리 후보
 
-새 프로젝트를 추가할 때 아래 항목을 이 문서에 추가합니다.
+삭제하지 않고 후보로만 기록합니다.
 
-| 항목 | 내용 |
+| 후보 | 위치 | 이유 |
+| --- | --- | --- |
+| 기존 깨진 README | `archive/cleanup-candidates/README.md.md` | 인코딩이 깨져 보이는 이전 루트 문서 |
+| Python 캐시 | `coursework/AI_Study/**/__pycache__/`, `*.pyc` | 실행 캐시 |
+| Jupyter 체크포인트 | `**/.ipynb_checkpoints/` | 자동 생성 파일 |
+| 가상환경 | `coursework/AI_Study/**/venv/` | 재생성 가능한 로컬 환경 |
+| Chroma DB | `coursework/AI_Study/08_LLM/chroma*/` | 로컬 벡터 DB 산출물 |
+| Django staticfiles | `coursework/AI_Study/**/staticfiles/`, `_staticfiles/` | collectstatic 산출물 |
+| 대형 CSV/모델 | `coursework/AI_Study/프로젝트 1/data/`, `*.h5`, `*.pkl`, `*.joblib` | Git LFS 또는 외부 보관 검토 |
+
+## 민감정보 후보
+
+실제 값은 출력하지 않습니다.
+
+| 위치 | 위험 유형 |
 | --- | --- |
-| 이름 |  |
-| 위치 | `projects/project-name/` |
-| 목적 |  |
-| 주요 기술 |  |
-| 데이터 |  |
-| 실행 방법 |  |
-| 상태 | planned / active / paused / archived |
+| `coursework/AI_Study/lease_law_app-main/lease_law_app-main/.env` | 실제 환경변수 파일 |
+| `coursework/AI_Study/**/settings.py` | Django secret, DB 설정 후보 |
+| `coursework/AI_Study/08_LLM/**/*.ipynb` | OpenAI/Pinecone/Upstage API 키 참조 후보 |
+| `experiments/vibe-project/Secret_Key*.ipynb` | 파일명 기준 secret/key 후보 |
+| `experiments/vibe-project/password_tool*.ipynb` | password 후보 |
 

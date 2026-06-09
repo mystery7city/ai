@@ -9,7 +9,7 @@
 ## AI 프로젝트와 분리하는 이유
 
 - `projects/`는 AI / ML / LLM 중심의 완성형 프로젝트를 둔다.
-- `AI_Study/`는 기존 수업/실습 원본 자료로 유지한다.
+- `coursework/AI_Study/`는 기존 수업/실습 원본 자료로 유지한다.
 - `programming/`은 AI 기능을 붙이기 전 필요한 일반 개발 역량을 따로 연습한다.
 - 이렇게 나누면 AI 실험 코드와 일반 웹/백엔드/프로그래밍 학습 코드가 섞이지 않아 찾기 쉽다.
 
@@ -74,4 +74,3 @@
 ## 첫 프로젝트 추천
 
 첫 일반 프로그래밍 프로젝트는 `06_backend/rest_api_practice/`에서 시작한다. FastAPI 또는 Flask로 간단한 REST API 서버를 만들며 HTTP, routing, JSON, status code, SQLite, CRUD를 한 번에 연습한다.
-
