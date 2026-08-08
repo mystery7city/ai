@@ -1,0 +1,19 @@
+{
+  "id": "random_forest",
+  "name": "Random Forest",
+  "model": "RandomForestClassifier",
+  "dataset": "iris",
+  "created_at": "2026-06-11T09:20:00+09:00",
+  "parameters": {
+    "n_estimators": 100,
+    "max_depth": 5,
+    "random_state": 42
+  },
+  "metrics": {
+    "accuracy": 0.962,
+    "f1": 0.959,
+    "training_seconds": 2.8
+  },
+  "notes": "Tree ensemble with moderate depth."
+}
+
